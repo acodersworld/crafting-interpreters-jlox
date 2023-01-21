@@ -11,12 +11,12 @@ set(CMAKE_JAVA_COMPILE_FLAGS, "-source" "1.6" "-target" "1.6")
 
 add_jar(jlox 
 	SOURCES
-		${CMAKE_CURRENT_SOURCE_DIR}/Lox.java
-		${CMAKE_CURRENT_SOURCE_DIR}/Scanner.java
-		${CMAKE_CURRENT_SOURCE_DIR}/Token.java
-		${CMAKE_CURRENT_SOURCE_DIR}/TokenType.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Lox.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Scanner.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Token.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/TokenType.java
 	MANIFEST
-		${CMAKE_CURRENT_SOURCE_DIR}/MANIFEST.MF)
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/MANIFEST.MF)
 
 get_target_property(_jarFile jlox JAR_FILE)
 get_target_property(_classDir jlox CLASSDIR)
