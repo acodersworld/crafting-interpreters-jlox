@@ -17,6 +17,7 @@ add_jar(jlox
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/TokenType.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Expr.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/AstPrinter.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Parser.java
 	MANIFEST
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/MANIFEST.MF)
 
