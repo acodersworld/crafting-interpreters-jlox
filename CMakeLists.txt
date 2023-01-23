@@ -21,6 +21,12 @@ add_jar(jlox
 	MANIFEST
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/MANIFEST.MF)
 
+add_custom_command(
+	OUTPUT
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Expr.java
+	COMMAND
+		java -jar ${CMAKE_BINARY_DIR}/generate_ast.jar ${CMAKE_CURRENT_SOURCE_DIR}/lox)
+
 add_jar(generate_ast
 	SOURCES
 		${CMAKE_CURRENT_SOURCE_DIR}/tool/GenerateAst.java
