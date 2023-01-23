@@ -16,16 +16,21 @@ add_jar(jlox
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Token.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/TokenType.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Expr.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Stmt.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/AstPrinter.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Parser.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/RuntimeError.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Interpreter.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Environment.java
 	MANIFEST
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/MANIFEST.MF)
 
 add_custom_command(
 	OUTPUT
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Expr.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Stmt.java
+	DEPENDS
+		${CMAKE_CURRENT_SOURCE_DIR}/tool/GenerateAst.java
 	COMMAND
 		java -jar ${CMAKE_BINARY_DIR}/generate_ast.jar ${CMAKE_CURRENT_SOURCE_DIR}/lox)
 
