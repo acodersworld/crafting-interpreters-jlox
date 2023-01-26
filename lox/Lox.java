@@ -63,6 +63,12 @@ public class Lox {
 			System.out.println(new AstPrinter().print(expression));
 		}*/
 
+		Resolver resolver = new Resolver(interpreter);
+		resolver.resolve(statements);
+
+		if (hadError) return;
+
+		System.out.println("INTER");
 		interpreter.interpret(statements);
 	}
 
@@ -72,7 +78,7 @@ public class Lox {
 
 	private static void report(int line, String where, String message) {
 		System.err.println("[line " + line + "] Error" + where + ": " + message);
-		hadError = false;
+		hadError = true;
 	}
 
 	static void error(Token token, String message) {
