@@ -22,6 +22,9 @@ add_jar(jlox
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/RuntimeError.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Interpreter.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Environment.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/LoxCallable.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/LoxFunction.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/Return.java
 	MANIFEST
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/MANIFEST.MF)
 
