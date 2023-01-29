@@ -24,6 +24,8 @@ add_jar(jlox
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Environment.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/LoxCallable.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/LoxFunction.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/LoxClass.java
+		${CMAKE_CURRENT_SOURCE_DIR}/lox/LoxInstance.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Return.java
 		${CMAKE_CURRENT_SOURCE_DIR}/lox/Resolver.java
 	MANIFEST

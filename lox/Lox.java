@@ -68,7 +68,6 @@ public class Lox {
 
 		if (hadError) return;
 
-		System.out.println("INTER");
 		interpreter.interpret(statements);
 	}
 
